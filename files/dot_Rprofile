@@ -1,0 +1,34 @@
+## set options
+repos <- c(
+  WASHU = "http://cran.wustl.edu/"
+)
+options(repos = repos)
+options(max.print = 100)
+options(scipen = 10)
+options(width = 80)
+
+## fix LC_MESSAGES issue
+invisible(Sys.setlocale("LC_MESSAGES", "C"))
+
+## override quit function so save defaults to "no"
+quit <- function(save = "no", status = 0, runLast = TRUE) {
+  .Internal(quit(save, status, runLast))
+}
+unlockBinding("quit", .BaseNamespaceEnv)
+assign("quit", quit, envir = baseenv())
+lockBinding("quit", .BaseNamespaceEnv)
+unlockBinding("q", .BaseNamespaceEnv)
+assign("q", quit, envir = baseenv())
+lockBinding("q", .BaseNamespaceEnv)
+
+## clear
+rm(quit, repos)
+
+.First <- function() {
+  if (requireNamespace("tfse", quietly = TRUE)) {
+    require(tfse, quietly = TRUE)
+  }
+}
+
+.Last <- function()  {
+}
