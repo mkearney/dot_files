@@ -1,0 +1,50 @@
+#personal-bookmarks .menu-iconic-text,
+#personal-bookmarks .toolbarbutton-text,
+.tab-text,
+#navigator-toolbox,
+.browserContainer > findbar,
+.browserContainer,
+#urlbar,
+#nav-bar,
+#identity-box,
+.toolbarbutton {
+    font-family: 'Helvetica Neue', sans-serif !important;
+    text-shadow: 0 0 rgba(0,0,0,0) !important;
+}
+
+.browserContainer > findbar {
+    height: 10px !important;
+}
+
+.tab-text {
+    background-color: transparent !important;
+    color: #ffffff !important;
+}
+
+#back-button .toolbarbutton-icon {
+    display: none;
+}
+
+
+#forward-button .toolbarbutton-icon {
+    display: none;
+}
+
+:root[uidensity=compact] #urlbar,
+:root[uidensity=compact] .searchbar-textbox {
+    font-size: unset !important;
+    min-height: 24px !important;
+}
+
+:root[uidensity=compact] #identity-box {
+    max-height: 22px;
+}
+
+:root[uidensity=compact] #nav-bar .toolbarbutton-1 {
+    padding: 0px !important;
+}
+
+[uidensity="compact"]:root {
+  --tab-min-height: 26px !important;
+  --newtab-margin: -3px 0 -3px -3px !important;
+}

@@ -14,3 +14,7 @@ defaults for R sessions.
 ## Bashrc
 My [.bashrc](files/.bashrc) file, which contains run commands to be
 executed at startup for bash.
+
+## userChrome
+My [userChrome.css](files/userChrome.css) file for cusutomizing the
+Firefox UI.
