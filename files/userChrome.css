@@ -1,4 +1,4 @@
-window$main-window,
+window#main-window,
 #personal-bookmarks .menu-iconic-text,
 #personal-bookmarks .toolbarbutton-text,
 .tab-text,
@@ -6,7 +6,13 @@ window$main-window,
 .browserContainer,
 #urlbar, #nav-bar, #identity-box, .toolbarbutton {
     font-family: 'Helvetica Neue', sans-serif !important;
-    text-shadow: 0 0 rgba(0,0,0,0) !important;
+    text-shadow: none !important;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+window#main-window {
+    --lwt-accent-color: none !important;
 }
 
 .browserContainer > findbar {
@@ -61,4 +67,13 @@ toolbar .toolbarbutton-1 > .toolbarbutton-icon {
 
 #navigator-toolbox > toolbar:not(#TabsToolbar) {
     background: transparent !important;
+}
+
+.tab-background {
+    border: 0 none transparent;
+}
+
+#urlbar, .searchbar-textbox {
+    border-radius: 2px !important;
+    margin: 0 5px !important;
 }
