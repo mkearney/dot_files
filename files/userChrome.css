@@ -1,13 +1,10 @@
+window$main-window,
 #personal-bookmarks .menu-iconic-text,
 #personal-bookmarks .toolbarbutton-text,
 .tab-text,
-#navigator-toolbox,
-.browserContainer > findbar,
+#navigator-toolbox, .browserContainer > findbar,
 .browserContainer,
-#urlbar,
-#nav-bar,
-#identity-box,
-.toolbarbutton {
+#urlbar, #nav-bar, #identity-box, .toolbarbutton {
     font-family: 'Helvetica Neue', sans-serif !important;
     text-shadow: 0 0 rgba(0,0,0,0) !important;
 }
@@ -33,11 +30,11 @@
 :root[uidensity=compact] #urlbar,
 :root[uidensity=compact] .searchbar-textbox {
     font-size: unset !important;
-    min-height: 24px !important;
+    min-height: 22px !important;
 }
 
 :root[uidensity=compact] #identity-box {
-    max-height: 22px;
+    max-height: 20px;
 }
 
 :root[uidensity=compact] #nav-bar .toolbarbutton-1 {
@@ -45,6 +42,23 @@
 }
 
 [uidensity="compact"]:root {
-  --tab-min-height: 26px !important;
+  --tab-min-height: 22px !important;
   --newtab-margin: -3px 0 -3px -3px !important;
+}
+
+toolbar .toolbarbutton-1 > .toolbarbutton-icon {
+    width: calc(1 * var(--toolbarbutton-inner-padding) + 16px) !important;
+    margin-top: 2px;
+}
+
+#urlbar, .searchbar-textbox {
+    font-size: 1.15em !important;
+}
+
+#main-window:-moz-any([sizemode="fullscreen"], [customize-entered]) #TabsToolbar:not([collapsed="true"]) + #nav-bar, #main-window:not([tabsintitlebar]) #TabsToolbar:not([collapsed="true"]) + #nav-bar, #TabsToolbar:not([collapsed="true"]) + #nav-bar:-moz-lwtheme {
+    border-top: 0px solid var(--tabs-border) !important;
+}
+
+#navigator-toolbox > toolbar:not(#TabsToolbar) {
+    background: transparent !important;
 }
